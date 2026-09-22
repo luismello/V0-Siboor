@@ -55,7 +55,7 @@ requirements: scripts/requirements.txt
 install_script: scripts/install.sh
 
 [spoolman]
-server: http://192.168.1.42:7912
+server: http://192.168.1.37:7912
 #   URL to the Spoolman instance. This parameter must be provided.
 sync_rate: 5
 #   The interval, in seconds, between sync requests with the
@@ -76,22 +76,3 @@ origin: https://github.com/andrewmcgr/klipper_tmc_autotune.git
 managed_services: klipper
 primary_branch: main
 install_script: install.sh
-
-[update_manager crowsnest]
-type: git_repo
-path: ~/crowsnest
-origin: https://github.com/mainsail-crew/crowsnest.git
-primary_branch: v5
-managed_services: crowsnest
-system_dependencies: system-dependencies.json
-virtualenv: ~/crowsnest-env
-requirements: requirements.txt
-
-[update_manager timelapse]
-type: git_repo
-primary_branch: main
-path: ~/moonraker-timelapse
-origin: https://github.com/mainsail-crew/moonraker-timelapse.git
-managed_services: klipper moonraker
-
-[timelapse]
